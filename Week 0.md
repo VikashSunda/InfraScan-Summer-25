@@ -1,4 +1,5 @@
-# InfraScan - MATLAB Setup Guide (Week 0)
+# InfraScan 
+## MATLAB Setup Guide (Week 0)
 
 ## 1. Install MATLAB
 
@@ -41,4 +42,4 @@ In MATLAB, go to:
 
 ---
 
-✅ *End of Week 0 Setup*
+✅ *End of Week 0*
