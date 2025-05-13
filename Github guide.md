@@ -1,4 +1,4 @@
-# Guide for Using GitHub with VisionCraft
+# Guide for Using GitHub
 
 ## Steps to Fork and Clone the Repository
 
