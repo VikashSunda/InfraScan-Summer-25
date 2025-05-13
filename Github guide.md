@@ -89,8 +89,8 @@
 - If you face errors, try searching for solutions on Google.
 - If issues persist, feel free to:
   - **Direct Message (DM)** me for help.
-  - Post your question in the **Discussions Group**.
+  - Post your question in the **Group**.
 
 ---
 
-**Note**: These steps were covered in the previous class. Ensure you understand them and reach out for help if needed.
+
