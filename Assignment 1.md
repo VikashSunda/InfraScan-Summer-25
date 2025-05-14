@@ -161,4 +161,4 @@ integral_result
 
 ## Summary
 
-This tutorial covers the basics of MATLAB, including variable definition, operations, arrays, loops, custom functions, plotting, and integration using both manual and built-in methods.
+This assignment covers the basics of MATLAB, including variable definition, operations, arrays, loops, custom functions, plotting, and integration using both manual and built-in methods.
