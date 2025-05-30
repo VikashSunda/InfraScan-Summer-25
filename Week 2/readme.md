@@ -75,15 +75,12 @@ figure; imshow(edgesCanny); title('Canny Edge Detection');
 
 - **Video Tutorials**  
   1. **MATLAB Image Processing Tutorial**  
-     https://www.youtube.com/watch?v=Q59sN8n2wJk  
+     [https://www.youtube.com/watch?v=Q59sN8n2wJk ](https://www.youtube.com/watch?v=eOUfW1mL88A) 
   2. **Edge Detection in MATLAB**  
-     https://www.youtube.com/watch?v=FYy8vI5dN_s
+     [https://www.youtube.com/watch?v=FYy8vI5dN_s](https://www.youtube.com/watch?v=FmyM9w3ZTAo)
 
 - **Sample Images**  
   - Built-in: `peppers.png`, `cameraman.tif`, `coins.png`  
-  - External source:  
-    - ImageNet: https://www.image-net.org/  
-    - Kaggle Datasets: https://www.kaggle.com/datasets
 
 ---
 
