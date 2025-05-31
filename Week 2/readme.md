@@ -1,69 +1,124 @@
-# Week 2: Introduction to Image Processing with MATLAB
+# Week 2: Introduction to Image Processing in MATLAB
 
-## 1. Starter Code: Basic Image Processing
+**Project**: InfraScan – AI-Powered Structural Health Monitoring  
+
+## 🧠 Core Concepts Covered
+- What is a digital image?
+- RGB vs. grayscale images
+- How to manipulate images using MATLAB
+- Visualizing results
+- Preprocessing steps for deep learning
+
+---
+
+## ✅ Prerequisites
+- MATLAB installed
+- Image Processing Toolbox installed
+- Sample images (`peppers.png`, `coins.png`, etc.)
+
+---
+
+## 🔧 Example 1: Load and Display Image
 
 ```matlab
-% Starter Code: Basic Image Processing in MATLAB
-% 1. Load and display the original image
-img = imread('peppers.png');
-figure; imshow(img); title('Original Image');
-
-% 2. Convert to grayscale
-grayImg = rgb2gray(img);
-figure; imshow(grayImg); title('Grayscale Image');
-
-% 3. Resize image to 256x256
-resizedImg = imresize(grayImg, [256 256]);
-figure; imshow(resizedImg); title('Resized Image');
-
-% 4. Apply Gaussian blur
-blurredImg = imgaussfilt(resizedImg, 2);
-figure; imshow(blurredImg); title('Gaussian Blurred Image');
-
-% 5. Perform edge detection (Canny)
-edgesCanny = edge(blurredImg, 'Canny');
-figure; imshow(edgesCanny); title('Canny Edge Detection');
+img = imread('peppers.png'); 
+figure; imshow(img); title('Original RGB Image');
+disp(size(img));
 ```
 
 ---
 
-## 2. Assignment
+## 🔧 Example 2: Resize the Image
 
-**Title:** Image Processing Workflow for Structural Health Monitoring
-
-**Tasks:**
-1. **Select an Image:** Choose a structural image (e.g., crack, corrosion, beam defect) and save it as `myImage.png`.
-2. **Custom Script:**  
-   - Read `myImage.png`  
-   - Convert to grayscale (`rgb2gray`)  
-   - Resize to **256×256** (`imresize`)  
-   - Apply both:
-     - Median filter (`medfilt2`)
-     - Gaussian filter (`imgaussfilt`)
-   - Perform edge detection:
-     - Sobel (`edge(...,'Sobel')`)
-     - Canny (`edge(...,'Canny')`)
-3. **Visualization:** Display all intermediate results in a single figure using subplots:
-   - Original
-   - Grayscale
-   - Median filtered
-   - Gaussian filtered
-   - Sobel edges
-   - Canny edges
-4. **Save Outputs:** Export each processed image as PNG:
-   - `grayscale.png`
-   - `median_filtered.png`
-   - `gaussian_filtered.png`
-   - `sobel_edges.png`
-   - `canny_edges.png`
-5. **Report (200–300 words):** Briefly describe:
-   - Differences between median and Gaussian filters.
-   - Comparison of Sobel vs. Canny edge detection.
-   - Potential applications for structural health monitoring.
+```matlab
+resizedImg = imresize(img, [256 256]);
+figure; imshow(resizedImg); title('Resized Image (256x256)');
+```
 
 ---
 
-## 3. Resources for Mentees
+## 🔧 Example 3: Convert to Grayscale
+
+```matlab
+grayImg = rgb2gray(resizedImg);
+figure; imshow(grayImg); title('Grayscale Image');
+```
+
+---
+
+## 🔧 Example 4: Gaussian Blur
+
+```matlab
+blurredImg = imgaussfilt(grayImg, 2);
+figure; imshow(blurredImg); title('Gaussian Blurred Image');
+```
+
+---
+
+## 🔧 Example 5: Sharpening
+
+```matlab
+sharpenedImg = imsharpen(grayImg);
+figure; imshow(sharpenedImg); title('Sharpened Image');
+```
+
+---
+
+## 🔧 Example 6: Histogram Equalization
+
+```matlab
+equalizedImg = histeq(grayImg);
+figure; imshow(equalizedImg); title('Histogram Equalized Image');
+```
+
+---
+
+## 🔧 Example 7: Adaptive Thresholding and Region Detection
+
+```matlab
+binaryImg = imbinarize(equalizedImg); 
+figure; imshow(binaryImg); title('Binarized Image');
+
+[labeledImg, num] = bwlabel(binaryImg); 
+coloredLabels = label2rgb(labeledImg, 'jet', 'k'); 
+figure; imshow(coloredLabels); title(['Detected Regions: ', num2str(num)]);
+```
+
+---
+
+## 🗂 Save All Outputs
+
+```matlab
+imwrite(resizedImg, 'resized_image.png');
+imwrite(grayImg, 'gray_image.png');
+imwrite(blurredImg, 'blurred_image.png');
+imwrite(sharpenedImg, 'sharpened_image.png');
+imwrite(equalizedImg, 'equalized_image.png');
+```
+
+---
+
+## 📝 Assignment for Mentees
+
+**Title**: Learn & Apply Basic Image Processing in MATLAB
+
+### 📌 Task:
+1. Choose any 1–2 sample images.
+2. Perform:
+   - Resize to 256x256
+   - Convert to grayscale
+   - Apply Gaussian blur
+   - Apply sharpening
+   - Perform histogram equalization
+   - Binarize the image
+   - Label connected regions
+
+### 📩 Submission:
+- MATLAB code (.m file)
+- A short report (max 150 words)
+
+---
+## 3. Resources
 
 - **MATLAB Documentation**  
   - Image Processing Toolbox Overview:  
